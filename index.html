@@ -7,6 +7,7 @@
     <meta name="description"
         content="Enjoy a selection of entertaining videos and audio content, all integrated into this webpage using HTML multimedia tags">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <title>Entertainment Hub</title>
 </head>
 
@@ -14,27 +15,35 @@
     <header>
         <h1>Entertainment Hub</h1>
         <p>Enjoy a collection of Islamic videos, YouTube lectures, and beautiful audio recitations.</p>
+        <form class="search-container" onsubmit="searchVideos(); return false;">
+
+            <input type="text" id="searchBox" placeholder="Search..." onkeyup="searchVideos()"
+                onkeydown="if(event.key==='Enter'){event.preventDefault();searchVideos();}">
+            <button type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+        </form>
     </header>
     <main>
-        <section>
+        <section class="content-section">
             <!-- Quick Quiz  -->
             <!-- Create a website which shows videos of different category and audios of different categories.
     You can use YouTube videos in an iframe using YouTube's embedding feature -->
-
             <!-- Different Categories Of Videos -->
             <h2>
                 <u>My Videos</u>
             </h2>
             <div class="video-container">
-                <figure class="video-box">
+                <figure class="video-box" data-title="Beautiful Bayan">
                     <figcaption>
                         Beautiful Bayan
                     </figcaption>
-                    <video  src="Saeyad Amenulhasnaat.mp4" preload="metadata" controls poster="murtaza.webp">Saeyad
+                    <video src="Saeyad Amenulhasnaat.mp4" preload="metadata" controls poster="murtaza.webp">Saeyad
                         Amen-ul-Hasnaat
                         ShahJi|Bazm-e-Hub-e-Al-e-Rasool|Latest Bayan</video>
                 </figure>
-                <figure class="video-box">
+                <figure class="video-box" data-title="Zikr-e-Ahl-e-Bait">
                     <figcaption>
                         Bayan: Zikr-e-Ahl-e-Bait
                     </figcaption>
@@ -42,7 +51,7 @@
                         Shah
                         Ji|Bazm-e-Hub-e-Al-e-Rasool|Latest Bayan</video>
                 </figure>
-                <figure class="video-box">
+                <figure class="video-box" data-title="Sunnat-e-Nabawi">
                     <figcaption>Sunnat-e-Nabawi</figcaption>
                     <video src="sunat.mp4" preload="metadata" controls poster="allahhu.webp">Sunat-e-Nabvi|Sun kar dil
                         ko Sukon
@@ -50,78 +59,99 @@
                 </figure>
             </div>
         </section>
-        <section>
+        <section class="content-section">
             <h2>
                 <u>Beautiful Islamic bayan And Naat</u>
             </h2>
             <!-- Different Categories of Videos in iframe using youtubes Embeding -->
             <div class="video-container">
-                <div class="video-box">
-                <iframe width="400" height="315" loading="lazy" src="https://www.youtube.com/embed/rI1bj1sWOxU?si=8w12622Oh0T7t833"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-box">
-                <iframe width="400" height="315" loading="lazy" src="https://www.youtube.com/embed/U9tFp4x6psw?si=U_Bc7hq5-U33m28K"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-box">
-                <iframe width="400" height="315" loading="lazy" src="https://www.youtube.com/embed/N8SiWCjushs?si=Ru0MFz6oll0UlMup"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-box">
-                <iframe width="400" height="315" loading="lazy" src="https://www.youtube.com/embed/wJP_87Isynw?si=xYgF55h5f-dHKUI-"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                <div class="video-box">
-                <iframe width="400" height="315" loading="lazy" src="https://www.youtube.com/embed/o2pby8W_1bU"
-                    title="جنت والوں کا نعرہ یا علی یا علی ❤️" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-box">
-                <iframe width="400" height="315" loading="lazy" src="https://www.youtube.com/embed/nWCbrIxxgGM"
-                    title="آقا ﷺ اپنے میلاد میں تشریف لاتے ہیں سماعت فرمائیں" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-box">
-                <iframe width="400" height="315" loading="lazy" src="https://www.youtube.com/embed/CZ34yB7vH_g?si=KmAsBd4PmhX9Mo5V"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-box">
-                <iframe width="400" height="315" loading="lazy" src="https://www.youtube.com/embed/fnv8w6ZR5Ks?si=A7-jDHu6n0Qnrtyu"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
+                <figure class="video-box" data-title="Karam Kamaway Sohna Naat">
+                    <figcaption>Karam Kamaway Sohna-Beautiful Naat | Sha'ir-e-Darbar-e-Risalat Janab Haji Riaz Mahmood
+                        Shahzad Chishti Qadri </figcaption>
+                    <iframe id="player1" width="400" height="315" loading="lazy"
+                        src="https://www.youtube.com/embed/rI1bj1sWOxU?enablejsapi=1&si=8w12622Oh0T7t833"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </figure>
+                <figure class="video-box" data-title="Bayan Part1">
+                    <figcaption>Shan-e-Mola Ali New Khatab-Part1 | Allama Syed Amin ul Hasnat Shah Sahib </figcaption>
+                    <iframe id="player3" width="400" height="315" loading="lazy"
+                        src="https://www.youtube.com/embed/N8SiWCjushs?enablejsapi=1&si=Ru0MFz6oll0UlMup"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </figure>
+                <figure class="video-box" data-title="Bayan Part2">
+                    <figcaption>Shan-e-Mola Ali New Khatab-Part2 | Allama Syed Amin ul Hasnat Shah Sahib</figcaption>
+                    <iframe id="player2" width="400" height="315" loading="lazy"
+                        src="https://www.youtube.com/embed/U9tFp4x6psw?enablejsapi=1&si=U_Bc7hq5-U33m28K"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </figure>
+                <figure class="video-box" data-title="Bayan Part3">
+                    <figcaption>Shan-e-Mola Ali New Khatab-Part3 | Allama Syed Amin ul Hasnat Shah Sahib</figcaption>
+                    <iframe id="player4" width="400" height="315" loading="lazy"
+                        src="https://www.youtube.com/embed/wJP_87Isynw?enablejsapi=1&si=xYgF55h5f-dHKUI-"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </figure>
+                <figure class="video-box" data-title="Jannat Walon Ka Nara Ya Ali Bayan">
+                    <figcaption>Jannat Walon Ka Nara Ya Ali Ya Ali | Allama Syed Amin ul Hasnat shah Sahib</figcaption>
+                    <iframe id="player5" width="400" height="315" loading="lazy"
+                        src="https://www.youtube.com/embed/o2pby8W_1bU?enablejsapi=1"
+                        title="جنت والوں کا نعرہ یا علی یا علی ❤️" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </figure>
+                <figure class="video-box" data-title="Milad-e- Nabi Bayan">
+                    <figcaption>Aaqa Apne Milad Mein Tashreef Late Hain | New Latest Bayan On Eid Miladun Nabi| Allama
+                        Syed Amin ul Hasnat Shah Sahib
+                    </figcaption>
+                    <iframe id="player6" width="400" height="315" loading="lazy"
+                        src="https://www.youtube.com/embed/nWCbrIxxgGM?enablejsapi=1"
+                        title="آقا ﷺ اپنے میلاد میں تشریف لاتے ہیں سماعت فرمائیں" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </figure>
+                <figure class="video-box"
+                    data-title="Ya Nabi Mujh Pe Bhi Aik Nigahe Karam Tujh Ko Bheja Gaya Hai Karam Ke Liye Naat">
+                    <figcaption>Ya Nabi Mujh Pe Bhi Aik Nigah-e-Karam tujh Ko Bheja Gaya Hai Karam Ke Liye | Beautiful
+                        Naat</figcaption>
+                    <iframe id="player7" width="400" height="315" loading="lazy"
+                        src="https://www.youtube.com/embed/CZ34yB7vH_g?enablejsapi=1&si=KmAsBd4PmhX9Mo5V"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </figure>
+                <figure class="video-box" data-title="Manqabat Mola Ali Hubdar Ali De Naat">
+                    <figcaption>Manqabat Mola ali-Hubdar Ali De-New Manqabat | Qari Shahid Mehmood </figcaption>
+                    <iframe id="player8" width="400" height="315" loading="lazy"
+                        src="https://www.youtube.com/embed/fnv8w6ZR5Ks?enablejsapi=1&si=A7-jDHu6n0Qnrtyu"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
             </div>
         </section>
-        <section>
+        <section class="content-section">
 
             <h2>
                 <u>Audio Collection</u>
             </h2>
             <!-- Different Categories of audios -->
             <div class="video-container">
-                <figure class="video-box">
+                <figure class="video-box" data-title="Assalam Ya Hussain Audio">
                     <figcaption>Assalam ya Hussain|Beautiful NaatAudio</figcaption>
                     <audio src="asalam ya hussain.mp3" controls>Salam-Ya-Hussain</audio>
                 </figure>
-                <figure class="video-box">
+                <figure class="video-box" data-title="Ali Warga amane Tey Koi PEr Wkha Minu Audio">
                     <figcaption>Ali-Warga-Zamane-Tey Koi Peer Wakha Mainu|Beautiful Naat|Audio</figcaption>
                     <audio src="ali-warga-zameny-tey.mp3" controls>Ali-warga-zamaney-tey</audio>
                 </figure>
-                <figure class="video-box">
+                <figure class="video-box" data-title="KONEN dE wali Da Sardar Bara Audio">
                     <figcaption>Konen-De-Wali Da Sardar Bara Sohna|Beautiful Naat|Audio</figcaption>
                     <audio src="konen-de-waali.mp3" controls>Konen-de-waali da darbar bara sohna</audio>
                 </figure>
@@ -131,6 +161,181 @@
     <footer>
         <p>&copy; 2026 Entertainment Hub | Created by MAbdullah Ansari</p>
     </footer>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        function searchVideos() {
+
+            let input = document.getElementById("searchBox").value.toLowerCase().trim();
+
+            let sections = document.querySelectorAll(".content-section");
+
+            sections.forEach(function (section) {
+
+                let boxes = section.querySelectorAll(".video-box");
+                let hasMatch = false;
+
+                boxes.forEach(function (box) {
+
+                    let dataTitle = (box.getAttribute("data-title") || "").toLowerCase();
+
+                    let caption = "";
+                    let figcaption = box.querySelector("figcaption");
+                    if (figcaption) {
+                        caption = figcaption.textContent.toLowerCase();
+                    }
+
+                    let iframeTitle = "";
+                    let iframe = box.querySelector("iframe");
+                    if (iframe) {
+                        iframeTitle = (iframe.getAttribute("title") || "").toLowerCase();
+                    }
+
+                    let searchText = dataTitle + " " + caption + " " + iframeTitle;
+
+                    if (searchText.includes(input)) {
+                        box.style.display = "";
+                        hasMatch = true;
+                    } else {
+                        box.style.display = "none";
+                    }
+
+                });
+
+                if (input === "") {
+                    section.style.display = "";
+                    boxes.forEach(function (box) {
+                        box.style.display = "";
+                    });
+                } else {
+                    section.style.display = hasMatch ? "" : "none";
+                }
+
+            });
+
+        }
+
+        // YouTube Players
+
+        let players = [];
+
+
+        function onYouTubeIframeAPIReady() {
+
+            console.log("YouTube API Ready");
+
+
+            for (let i = 1; i <= 8; i++) {
+
+
+                players[i - 1] = new YT.Player("player" + i, {
+
+                    events: {
+
+                        "onStateChange": onPlayerStateChange
+
+                    }
+
+                });
+
+
+            }
+
+        }
+
+
+
+        // When YouTube video plays
+
+        function onPlayerStateChange(event) {
+
+
+            if (event.data == YT.PlayerState.PLAYING) {
+
+
+                players.forEach(function (player) {
+
+
+                    if (player && player !== event.target) {
+
+                        player.pauseVideo();
+
+                    }
+
+
+                });
+
+
+                // Pause local videos and audio
+
+                let media = document.querySelectorAll("video,audio");
+
+
+                media.forEach(function (item) {
+
+                    item.pause();
+
+                });
+
+
+
+            }
+
+
+        }
+
+
+
+        // When Local video/audio plays
+
+        const mediaFiles = document.querySelectorAll("video,audio");
+
+
+        mediaFiles.forEach(function (media) {
+
+
+            media.addEventListener("play", function () {
+
+
+                // Pause other local media
+
+                mediaFiles.forEach(function (other) {
+
+
+                    if (other !== media) {
+
+                        other.pause();
+
+                    }
+
+
+                });
+
+
+
+                // Pause YouTube videos
+
+                players.forEach(function (player) {
+
+
+                    if (player && player.pauseVideo) {
+
+                        player.pauseVideo();
+
+                    }
+
+
+                });
+
+
+
+            });
+
+
+        });
+
+
+    </script>
+
 </body>
 
 </html>
